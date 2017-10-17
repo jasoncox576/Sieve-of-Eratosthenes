@@ -19,8 +19,10 @@ vector<int> sieve(int n) {
 		if(table[p - 1] == false) {
 			continue;
 		}
+                
 
-		int iter = pow(p,2);
+		int iter = p * p;
+
 		for(; iter <= n; iter += p) {
 			table[iter - 1] = false;
 		}
